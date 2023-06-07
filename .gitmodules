@@ -1,0 +1,3 @@
+[submodule "guestbook-service"]
+	path = guestbook-service
+	url = https://github.com/deroceratops/guestbook-service.git
