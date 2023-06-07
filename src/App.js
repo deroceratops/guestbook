@@ -88,7 +88,7 @@ function App() {
             for (let i = 0; i < messageCount; i++) {
                 tempMessageArray.push(hex2a(stringKeys["message_" + i]));
             }
-            setMessagesToDisplay(tempMessageArray);
+            setMessagesToDisplay(tempMessageArray.reverse());
         }
     };
 
