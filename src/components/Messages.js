@@ -1,11 +1,13 @@
 const Messages = ({ messages }) => {
   return (
     <>
+      <ul>
         {
            messages.map((message, key) => (
-               <p key={key}>{message}</p>
+               <li key={key}>{message}</li>
            ))
         }
+      </ul>
     </>
   );
 };

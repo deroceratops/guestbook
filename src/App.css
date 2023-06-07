@@ -28,3 +28,8 @@ input[type=text] {
 #mascot {
   height: 7em;
 }
+
+ul li {
+  margin-bottom: 1em;
+  text-align: left;
+}
