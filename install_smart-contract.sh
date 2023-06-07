@@ -11,11 +11,17 @@ if [[ $TXID == "" ]]; then
   exit 0
 fi;
 
-OUTPUTFILE="src/scid.js"
+OUTPUTFILES=("src/scid.js" "service/scid.js")
 
-cat << EOT > $OUTPUTFILE
-const scid = '$TXID';
-export default scid;
-EOT
+CONTENT="const scid = '$TXID'; export default scid;"
 
-printf "${green}The smart contract was installed.${clear}\nThe TXID $TXID was saved to the file $OUTPUTFILE\n"
+for ((i = 0; i < ${#OUTPUTFILES[@]}; ++i)); do
+  OUTPUTFILE="${OUTPUTFILES[$i]}"
+  echo $CONTENT > $OUTPUTFILE
+done
+
+printf "${green}The smart contract was installed.${clear}\n"
+printf "The TXID $TXID was saved to the following files:\n"
+for ((i = 0; i < ${#OUTPUTFILES[@]}; ++i)); do
+  echo "${OUTPUTFILES[$i]}"
+done
