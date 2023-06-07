@@ -14,4 +14,3 @@ Function AddMessage(message String) Uint64
 50 STORE("messageCount", messageCount + 1)
 60 RETURN 0
 End Function
-
