@@ -1,14 +1,10 @@
-const Messages = ({messages}) => {
+const Messages = ({ messages }) => {
   return (
     <>
       <ul>
-        {
-          messages.map((message, key) => (
-            <li key={key}>
-              {message}
-            </li>
-          ))
-        }
+        {messages.map((message, key) => (
+          <li key={key}>{message}</li>
+        ))}
       </ul>
     </>
   );
