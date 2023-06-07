@@ -11,7 +11,7 @@ if [[ $TXID == "" ]]; then
   exit 0
 fi;
 
-OUTPUTFILES=("src/scid.js" "service/scid.js")
+OUTPUTFILES=("src/scid.js" "guestbook-service/scid.js")
 
 CONTENT="const scid = '$TXID'; export default scid;"
 
